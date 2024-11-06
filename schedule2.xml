@@ -1,0 +1,32 @@
+<Schedule>
+    <Wednesday>
+        <Lesson1>
+            <Name>Информатика</Name>
+            <Time>8:20-9:50</Time>
+            <Type>Лекция</Type>
+            <Teacher>Балакшин Павел Валерьевич</Teacher>
+            <Place>Ауд. Актовый зал (1216/0 (усл)), ул.Ломоносова, д.9, лит. М </Place>
+        </Lesson1>
+        <Lesson2>
+            <Name>Основы профессиональной деятельности</Name>
+            <Time>10:00-11:30</Time>
+            <Type>Лекция</Type>
+            <Teacher>Клименков Сергей Викторович</Teacher>
+            <Place>Ауд. Актовый зал (1216/0 (усл)), ул.Ломоносова, д.9, лит. М  </Place>
+        </Lesson2>
+        <Lesson3>
+            <Name>Информатика</Name>
+            <Time>13:40-15:00 </Time>
+            <Type>Практика</Type>
+            <Teacher>Ауд. 2116, Кронверкский пр., д.49, лит.А </Teacher>
+            <Place>Ауд. 1314, ул.Ломоносова, д.9, лит. М </Place>
+        </Lesson3>
+        <Lesson4>
+            <Name>Информатика</Name>
+            <Time>13:40-15:00 </Time>
+            <Type>Лабораторная</Type>
+            <Teacher>Авксентьева Елена Юрьевна</Teacher>
+            <Place>Ауд. 2116, Кронверкский пр., д.49, лит.А </Place>
+        </Lesson4>
+    </Wednesday>
+</Schedule>

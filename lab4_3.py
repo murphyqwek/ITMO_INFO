@@ -40,7 +40,7 @@ class XMLToDict(Transformer):
             result.update(item)
         return result
 
-parse_tree = parser.parse(open("s.xml", encoding='utf-8').read())
+parse_tree = parser.parse(open("schedule2.xml", encoding='utf-8').read())
 
 def tree_to_dict(tree):
     if tree.data == 'tag_content':
@@ -63,4 +63,4 @@ def tree_to_dict(tree):
     return None
 
 result = tree_to_dict(parse_tree)
-print(json.dumps(result, ensure_ascii=False, indent=4))
+open("res3_2.json", 'w', encoding='utf-8').write(json.dumps(result, ensure_ascii=False, indent=4))

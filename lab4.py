@@ -64,24 +64,28 @@ def pretty(d, indent=0):
          print(TAB * (indent+1) + str(value))
 
 def jsonPrinter(parsedDict: dict, depth = 1):
+    output = ""
     last_index_of_element_in_branch = len(parsedDict.keys()) - 1
     for i, key in enumerate(parsedDict.keys()):
         element = parsedDict[key]
         last_str = ""
         if type(element) is not dict:
-            last_str = TAB * depth + f'"{key}": "{element}"'
+            last_str = "\n" + TAB * depth + f'"{key}": "{element}"'
         else:
-            print(TAB * depth + f'"{key}": ' + "{")
-            jsonPrinter(element, depth + 1)
-            last_str = TAB * depth + "}"
+            output += "\n" +TAB * depth + f'"{key}": ' + "{"
+            output += jsonPrinter(element, depth + 1)
+            last_str = "\n" + TAB * depth + "}"
 
         if i != last_index_of_element_in_branch:
             last_str += ","
         
-        print(last_str)
+        output += last_str
+    return output
 
 parsedDict = parseBranch("")
 
-print("{")
-jsonPrinter(parsedDict)
-print("}")
+res = jsonPrinter(parsedDict)
+
+res = "{" + res + "\n}"
+
+open("resMain.json", 'w', encoding='utf-8').write(res)
